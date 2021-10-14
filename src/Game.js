@@ -11,11 +11,9 @@ const Game = () => {
 
     const resetAll = () =>{
 
-        for(let i = 0; i < 3; i++){
-            line1[i] = null
-            line2[i] = null
-            line3[i] = null
-        }
+        setLine1([null, null, null]);
+        setLine2([null, null, null]);
+        setLine3([null, null, null]);
         setPlayer(null);
         setWinner(0);
 
