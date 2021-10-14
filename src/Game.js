@@ -3,9 +3,9 @@ import "./Game.css"
 
 const Game = () => {
 
-    const line1 = [null, null, null];
-    const line2 = [null, null, null];
-    const line3 = [null, null, null];
+    const [line1, setLine1] = useState([null, null, null]);
+    const [line2, setLine2] = useState([null, null, null]);
+    const [line3, setLine3] = useState([null, null, null]);
     const [player, setPlayer] = useState(null);
     const [winner, setWinner] = useState(0);
 
@@ -97,7 +97,7 @@ const Game = () => {
 
     const setValues = (index, line, value) =>{
 
-        if(value !== null || winner !== 0 || player === null){
+        if(value != null || winner !== 0 || player === null){
             return;
         }
 
